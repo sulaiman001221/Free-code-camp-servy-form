@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Forms</title>
+    <link rel="stylesheet" href="./public/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">South African E-Commerce Preferences</h1>
+      <p id="little-title">Will Amazon Win Over Takealot?</p>
+      <form id="survey-form" action="/submit-survey" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Eg. Sula Ndlovu"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Eg. someone@gmail.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="number"
+            >How many times do you typically shop online per month?
+          </label>
+          <input
+            id="number"
+            type="number"
+            name="shopping-frequency"
+            min="0"
+            max="50"
+            placeholder="Eg. 5"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label
+            >How aware are you of Amazon’s recent launch in South Africa?
+          </label>
+          <div class="options-group">
+            <label
+              ><input
+                name="awareness"
+                type="radio"
+                value="very-aware"
+                checked
+              />Very aware</label
+            >
+            <label
+              ><input
+                name="awareness"
+                type="radio"
+                value="somewhat-aware"
+              />Somewhat aware</label
+            >
+            <label
+              ><input name="awareness" type="radio" value="not-aware" />Not
+              aware</label
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="takealot-usage"
+            >How frequently do you use Takealot for your online shopping?</label
+          >
+          <select name="takealot-usage" id="takealot-usage">
+            <option value="select">Select one</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="rarely">Rarely</option>
+            <option value="never">Never</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="amazon-interest"
+            >How interested are you in trying Amazon for your online shopping
+            needs?</label
+          >
+          <select name="amazon-interest" id="amazon-interest">
+            <option value="select">Select one</option>
+            <option value="very-interested">Very interested</option>
+            <option value="somewhat-interested">Somewhat interested</option>
+            <option value="neutral">Neutral</option>
+            <option value="not-very-interested">Not very interested</option>
+            <option value="not-interested">Not interested at all</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label
+            >What features would make you consider giving Amazon a try? (Select
+            all that apply)</label
+          >
+          <div class="options-group">
+            <label
+              ><input
+                type="checkbox"
+                name="preferred-features"
+                value="lower-prices"
+                checked
+              />Lower prices</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="preferred-features"
+                value="product-variety"
+              />Better product variety</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="preferred-features"
+                value="delivery"
+              />Faster delivery</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="preferred-features"
+                value="customer-service"
+              />Improved customer service</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="preferred-features"
+                value="reviews"
+              />More reliable product reviews</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="preferred-features"
+                value="other"
+              />Other</label
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label
+            >What concerns do you have about shopping on Amazon compared to
+            Takealot? (Select all that apply)</label
+          >
+          <div class="options-group">
+            <label
+              ><input
+                type="checkbox"
+                name="concerns"
+                value="delivery-times"
+                checked
+              />Delivery times</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="concerns"
+                value="product-quality"
+              />Product quality</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="concerns"
+                value="customer-service"
+              />Customer service</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="concerns"
+                value="return-policy"
+              />Return policy</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="concerns"
+                value="web-usability"
+              />Website usability</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="concerns"
+                value="competition"
+              />Price competitiveness</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="concerns"
+                value="other"
+              />Other</label
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="shopping-preferences"
+            >Which factors most influence your choice of an online shopping
+            platform?
+          </label>
+          <select name="shopping-preferences" id="shopping-preferences">
+            <option value="select">Select one</option>
+            <option value="customer-service">Customer service</option>
+            <option value="ease-of-use">Ease of use</option>
+            <option value="reviews">Customer reviews</option>
+            <option value="delivery-options">Delivery options</option>
+            <option value="product-selection">Product selection</option>
+            <option value="price">Price</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="challenges"
+            >What would be the biggest challenge for Amazon in convincing you to
+            switch from Takealot?
+          </label>
+          <select name="challenge" id="challenge">
+            <option value="select">Select one</option>
+            <option value="familiarity">Lack of familiarity with Amazon</option>
+            <option value="product-range">Inadequate product range</option>
+            <option value="returns">Concerns about delivery and returns</option>
+            <option value="promotions">
+              Better deals and promotions at Takealot
+            </option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="comments">Additional Comments</label>
+          <textarea name="comments" id="comments" rows="4"></textarea>
+        </div>
+        <button type="submit">Submit Survey</button>
+      </form>
+    </div>
+    <div id="success-message" hidden>
+      <img src="./images/checkmark-gif.gif" alt="success-tick" />
+      <h2>Your submission has been received</h2>
+      <p id="return">Return</p>
+    </div>
+  </body>
+  <script src="./dist/bundle.js"></script>
+</html>

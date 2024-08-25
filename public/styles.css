@@ -1,0 +1,111 @@
+body {
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+}
+
+#title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 20px;
+}
+
+#little-title {
+  text-align: center;
+  font-family: Haettenschweiler, sans-serif;
+  font-size: 20px;
+  margin-top: 1px;
+  color: #333333;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background-color: #f2f3f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 95%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  padding: 14px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border: 2px solid #333333;
+}
+
+.options-group label {
+  font-weight: lighter;
+}
+
+.options-group input {
+  margin-right: 9px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #333333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #171717;
+}
+
+#success-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: none;
+}
+
+#success-message img {
+  margin-bottom: 20px;
+}
+
+#success-message h2 {
+  margin: 10px 0;
+}
+
+#success-message p {
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 18px;
+  color: blue;
+}
